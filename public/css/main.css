@@ -1,0 +1,171 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+html {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100vw;
+}
+body {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100vw;
+  background-color: rgb(35, 40, 45);
+  color: rgb(255, 255, 255);
+}
+header {
+  height: 50px;
+  background-color: rgb(55, 60, 65);
+}
+footer {
+  display: flex;
+  height: 50px;
+  background-color: rgb(55, 60, 65);
+  margin-top: auto;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  margin: 0 20px 0 10px;
+  font-weight: 400;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 450px;
+  max-width: 768px;
+  margin: 60px auto 20px;
+  padding: 40px 50px;
+  border-radius: 50px;
+  background-image: url("../img/karta_bankowa.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 768px 450px;
+  justify-content: center;
+}
+
+.card form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 145px;
+}
+.card input {
+  height: 50px;
+  padding: 0 10px;
+  font-size: 24px;
+}
+.card span {
+  font-weight: 300;
+}
+.card form button {
+  margin-right: auto;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 25px;
+}
+@keyframes buttonAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.card form button:hover {
+  background-color: rgb(35, 40, 45);
+  color: rgb(255, 255, 255);
+  animation: buttonAnimation 200ms linear infinite;
+}
+.yourCardIs {
+  display: flex;
+  flex-direction: column;
+  min-height: 30px;
+  align-items: center;
+  justify-content: center;
+}
+#yourCardIs {
+  display: block;
+  font-size: 40px;
+}
+.codeCards {
+  max-width: 768px;
+  margin: 10px auto;
+}
+.codeCards span {
+  display: block;
+  font-size: 18px;
+}
+/* tablet */
+@media screen and (max-width: 769px) {
+  main {
+    padding: 0 10px;
+    margin-top: -30px;
+  }
+}
+/* mobile */
+@media screen and (max-width: 500px) {
+  .card {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: scale(0.4) translateX(-125%) translateY(-60%);
+    margin: 10px 0;
+    min-width: 768px;
+    height: 450px;
+  }
+  header {
+    margin-bottom: 200px;
+  }
+  #yourCardIs {
+    margin-top: 60px;
+    font-size: 24px;
+  }
+  .codeCards {
+    width: 300px;
+  }
+  .codeCards span {
+    font-size: 14px;
+  }
+  .card form input {
+    margin-top: -30px;
+    transform: scale(1.1);
+  }
+  .card form button {
+    position: absolute;
+    transform: scale(2);
+    top: 500px;
+  }
+  footer {
+    font-size: 12px;
+  }
+  main {
+    padding: 0px;
+    margin-top: 0px;
+  }
+}

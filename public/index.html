@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>What Card</title>
+</head>
+
+<body>
+    <header>
+        <h1>What Card</h1>
+    </header>
+    <main>
+        <article class="card">
+            <form id="formCard">
+                <input class="numberCard" type="number" placeholder="Your code card" />
+                <button>Check!</button>
+            </form>
+        </article>
+        <article class="yourCardIs">
+            <span id="yourCardIs">Jaka jest twoja karta?</span>
+        </article>
+        <div class="codeCards">
+            <span>Przykładowe kody kart:</span>
+            <span>American Express: 370000000000002</span>
+            <span>Mastercard: 5193080150954111</span>
+            <span>Visa: 4874477771587420</span>
+        </div>
+    </main>
+    <footer>
+        Strone zrealizował Marcin Czaniecki
+    </footer>
+</body>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="./script/verif.js"></script>
+
+</html>
